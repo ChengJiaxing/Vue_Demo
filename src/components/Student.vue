@@ -73,7 +73,7 @@ export default {
         },
         save() {
             axios({
-                url: "http://localhost:8081/update",
+                url: "http://localhost:8082/update",
                 method: "POST",
                 data: this.student
             })
@@ -81,7 +81,7 @@ export default {
         },
         deleteStudent() {
             axios({
-                url: "http://localhost:8081/delete",
+                url: "http://localhost:8082/delete",
                 method: "POST",
                 data: this.student
             })

@@ -205,7 +205,7 @@ export default {
     getStudents() {
       if (sessionStorage.getItem("isLogined") == "true") {
         axios({
-          url: "http://localhost:8081/students",
+          url: "http://localhost:8082/students",
           method: "GET",
         }).then(res => {
           console.log(res.data);
@@ -225,7 +225,7 @@ export default {
     },
     addStudent() {
       axios({
-        url: "http://localhost:8081/add",
+        url: "http://localhost:8082/add",
         method: "POST",
         data: this.newStudent
       })
@@ -233,7 +233,7 @@ export default {
     },
     login() {
       axios({
-        url: "http://localhost:8081/login",
+        url: "http://localhost:8082/login",
         method: "POST",
         data: this.user_for_login
       }).then(res => {
@@ -250,7 +250,7 @@ export default {
     },
     register() {
       axios({
-        url: "http://localhost:8081/register",
+        url: "http://localhost:8082/register",
         method: "POST",
         data: this.user_for_register
       })
@@ -259,7 +259,7 @@ export default {
     },
     search() {
       axios({
-        url: "http://localhost:8081/search",
+        url: "http://localhost:8082/search",
         method: "POST",
         data: {
           name: this.search_name
